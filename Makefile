@@ -4,10 +4,10 @@ OUTPUT=.vimrc
 default : install spotless
 
 install : $(OUTPUT)
-	cp $< ~
+	cp $(OUTPUT) ~
 
 $(OUTPUT) : $(SOURCE)
-	cp $< $@
+	cp $(SOURCE) $@
 
 clean :
 
