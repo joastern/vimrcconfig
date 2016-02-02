@@ -64,13 +64,14 @@ set number
 
 " Establishes a color scheme
 set background=dark
-" colorscheme darkblue
+colorscheme darkblue
 set term=xterm-256color
 let g:solarized_termcolors=256
+let g:solarized_contrast="high"
 colorscheme solarized
 
 " Add max char indicator
-match ErrorMsg '\%>80v.\+'
+match ErrorMsg '\%>120v.\+'
 
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
