@@ -66,6 +66,9 @@ set background=dark
 " Add max char indicator
 match ErrorMsg '\%>80v.\+'
 
+" Install pathogen.vim
+execute pathogen#infect()
+
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog
 au BufNewFile,BufRead *.vh  set filetype=verilog
