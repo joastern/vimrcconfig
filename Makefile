@@ -17,6 +17,7 @@ pathogen :
 	mkdir -p $(VIMBIN)/autoload $(VIMBIN)/bundle
 	curl -LSso $(VIMBIN)/autoload/$@.vim https://tpo.pe/$@.vim
 
+# Adds directory browsing toolbar (change .vimrc as well)
 nerdtree :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/scrooloose/$@.git
@@ -27,21 +28,23 @@ nerdtree-git-plugin :
 	git clone https://github.com/Xuyuanp/nerdtree-git-plugin
 	mv -f $@ $(VIMBIN)/bundle/$@
 
+# Adds fancy bottom bar
 vim-airline :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/bling/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
 
+# Adds cool colortheme
 vim-colors-solarized :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/altercation/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
 
+# Adds git sidebar +/-
 vim-gitgutter :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/airblade/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
-
 
 clean :
 	rm -rf $(OUTPUT) $(DEPEND) $(OPTION)
