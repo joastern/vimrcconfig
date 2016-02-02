@@ -3,10 +3,10 @@ OUTPUT=.vimrc
 DEPEND=pathogen nerdtree vim-airline
 VIMBIN=~/.vim
 
-default : install spotless
+default : pull install
 
 install : $(OUTPUT)
-	cp $(OUTPUT) ~
+	mv -f $(OUTPUT) ~
 
 $(OUTPUT) : $(DEPEND) $(SOURCE)
 	cp $(SOURCE) $@
@@ -16,18 +16,21 @@ pathogen :
 	curl -LSso $(VIMBIN)/autoload/$@.vim https://tpo.pe/$@.vim
 
 nerdtree :
+	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/scrooloose/$@.git
 	mv $@ $(VIMBIN)/bundle/$@
 
+
 vim-airline :
+	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/bling/$@.git
 	mv $@ $(VIMBIN)/bundle/$@
 
 clean :
-
-spotless : clean
 	rm -f $(OUTPUT)
 
-.PHONY : default install clean spotless
+spotless : clean
+
+.PHONY : default install clean spotless $(DEPEND)
 
 include git.mk
