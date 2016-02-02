@@ -3,6 +3,9 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Install pathogen.vim
+execute pathogen#infect()
+
 " Turns on Syntax color-coding
 syntax on
 
@@ -60,21 +63,21 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ Line:\ %l,%c
 set number
 
 " Establishes a color scheme
-colorscheme darkblue
 set background=dark
+" colorscheme darkblue
+set term=xterm-256color
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Add max char indicator
 match ErrorMsg '\%>80v.\+'
 
-" Install pathogen.vim
-execute pathogen#infect()
-
-" Set nerdtree config
-autocmd vimenter * NERDTree "start automatically
-autocmd StdinReadPre * let s:std_in=1 "cont
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif "cont
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
+" Set nerdtree config (uncomment all of the below to use)
+" autocmd vimenter * NERDTree "start automatically
+" autocmd StdinReadPre * let s:std_in=1 "cont
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif "cont
+" map <C-n> :NERDTreeToggle<CR>
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
 
 " Set powerline fonts for airplane
 let g:airplane_powerline_fonts = 1
