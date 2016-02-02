@@ -18,18 +18,22 @@ pathogen :
 nerdtree :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/scrooloose/$@.git
-	mv $@ $(VIMBIN)/bundle/$@
+	mv -f $@ $(VIMBIN)/bundle/$@
 
 
 vim-airline :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/bling/$@.git
-	mv $@ $(VIMBIN)/bundle/$@
+	mv -f $@ $(VIMBIN)/bundle/$@
 
 clean :
-	rm -f $(OUTPUT)
+	rm -rf $(OUTPUT) $(DEPEND)
 
 spotless : clean
+
+uninstall : spotless
+	rm -rf ~/$(OUTPUT) $(VIMBIN)
+
 
 .PHONY : default install clean spotless $(DEPEND)
 
