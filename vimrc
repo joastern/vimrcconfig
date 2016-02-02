@@ -69,6 +69,13 @@ match ErrorMsg '\%>80v.\+'
 " Install pathogen.vim
 execute pathogen#infect()
 
+" Set nerdtree config
+autocmd vimenter * NERDTree "start automatically
+autocmd StdinReadPre * let s:std_in=1 "cont
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif "cont
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
+
 " Set powerline fonts for airplane
 let g:airplane_powerline_fonts = 1
 

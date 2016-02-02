@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen nerdtree vim-airline
+DEPEND=pathogen nerdtree nerdtree-git-plugin vim-airline
 VIMBIN=~/.vim
 
 default : pull install
@@ -20,6 +20,11 @@ nerdtree :
 	git clone https://github.com/scrooloose/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
 
+nerdtree-git-plugin :
+	rm -rf $@ $(VIMBIN)/bundle/$@
+	git clone https://github.com/Xuyuanp/nerdtree-git-plugin
+	mv -f $@ $(VIMBIN)/bundle/$@
+
 
 vim-airline :
 	rm -rf $@ $(VIMBIN)/bundle/$@
@@ -33,7 +38,6 @@ spotless : clean
 
 uninstall : spotless
 	rm -rf ~/$(OUTPUT) $(VIMBIN)
-
 
 .PHONY : default install clean spotless $(DEPEND)
 
