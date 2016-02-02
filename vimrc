@@ -64,7 +64,7 @@ set number
 
 " Establishes a color scheme
 set background=dark
-colorscheme darkblue
+colorscheme darkblue " Fallback colorscheme
 set term=xterm-256color
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
@@ -82,6 +82,9 @@ match ErrorMsg '\%>120v.\+'
 
 " Set powerline fonts for airplane
 let g:airplane_powerline_fonts = 1
+
+" Set gitgutter realtime
+let g:gitgutter_realtime = 1
 
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog

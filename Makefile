@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen vim-airline vim-colors-solarized #$(OPTION) 
+DEPEND=pathogen vim-airline vim-colors-solarized vim-gitgutter #$(OPTION) 
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -35,6 +35,11 @@ vim-airline :
 vim-colors-solarized :
 	rm -rf $@ $(VIMBIN)/bundle/$@
 	git clone https://github.com/altercation/$@.git
+	mv -f $@ $(VIMBIN)/bundle/$@
+
+vim-gitgutter :
+	rm -rf $@ $(VIMBIN)/bundle/$@
+	git clone https://github.com/airblade/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
 
 
