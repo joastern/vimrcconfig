@@ -81,10 +81,12 @@ match ErrorMsg '\%>120v.\+'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
 
 " Set powerline fonts for airplane
+" Doesn't work on Cygwin
 let g:airplane_powerline_fonts = 1
 
-" Set gitgutter realtime
+" Configure gitgutter
 let g:gitgutter_realtime = 1
+" let g:gitgutter_highlight_lines = 1 "Enable gitgitter highlight
 
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog
