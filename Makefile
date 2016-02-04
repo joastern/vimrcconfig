@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
+DEPEND=pathogen auto-pairs supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -16,6 +16,12 @@ $(OUTPUT) : $(DEPEND) $(SOURCE)
 pathogen :
 	mkdir -p $(VIMBIN)/autoload $(VIMBIN)/bundle
 	curl -LSso $(VIMBIN)/autoload/$@.vim https://tpo.pe/$@.vim
+
+# Auto add matching brackets
+auto-pairs :
+	rm -rf $@ $(VIMBIN)/bundle/$@
+	git clone https://github.com/jiangmiao/$@.git
+	mv -f $@ $(VIMBIN)/bundle/$@
 
 # Adds directory browsing toolbar (change .vimrc as well)
 nerdtree :
