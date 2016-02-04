@@ -4,62 +4,56 @@ DEPEND=pathogen auto-pairs supertab vim-airline vim-colors-solarized vim-gitgutt
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
+VIMBUN=$(VIMBIN)/bundle
 
 default : pull install
 
-install : $(OUTPUT)
+install : $(DEPEND) $(OUTPUT)
 	mv -f $(OUTPUT) ~
 
-$(OUTPUT) : $(DEPEND) $(SOURCE)
+$(OUTPUT) : $(SOURCE)
 	cp $(SOURCE) $@
 
 pathogen :
-	mkdir -p $(VIMBIN)/autoload $(VIMBIN)/bundle
+	mkdir -p $(VIMBIN)/autoload $(VIMBUN)
 	curl -LSso $(VIMBIN)/autoload/$@.vim https://tpo.pe/$@.vim
 
 # Auto add matching brackets
 auto-pairs :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/jiangmiao/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/jiangmiao/$@.git $(VIMBUN)/$@
 
 # Adds directory browsing toolbar (change .vimrc as well)
 nerdtree :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/scrooloose/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/scrooloose/$@.git $(VIMBUN)/$@
 
 nerdtree-git-plugin :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/Xuyuanp/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/Xuyuanp/$@.git $(VIMBUN)/$@
 
 # Autocomplete with tab key
 supertab :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/ervandew/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/ervandew/$@.git $(VIMBUN)/$@
 
 # Adds fancy bottom bar
 vim-airline :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/bling/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/bling/$@.git $(VIMBUN)/$@
 
 # Adds cool colortheme
 vim-colors-solarized :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/altercation/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/altercation/$@.git $(VIMBUN)/$@
 
 # Adds git sidebar +/-
 vim-gitgutter :
-	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/airblade/$@.git
-	mv -f $@ $(VIMBIN)/bundle/$@
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/airblade/$@.git $(VIMBUN)/$@
 
 clean :
-	rm -rf $(OUTPUT) $(DEPEND) $(OPTION)
+	rm -rf $(OUTPUT)
 
 spotless : clean 
 
