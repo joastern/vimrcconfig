@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen vim-airline vim-colors-solarized vim-gitgutter #$(OPTION) 
+DEPEND=pathogen supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -25,7 +25,13 @@ nerdtree :
 
 nerdtree-git-plugin :
 	rm -rf $@ $(VIMBIN)/bundle/$@
-	git clone https://github.com/Xuyuanp/nerdtree-git-plugin
+	git clone https://github.com/Xuyuanp/$@.git
+	mv -f $@ $(VIMBIN)/bundle/$@
+
+# Autocomplete with tab key
+supertab :
+	rm -rf $@ $(VIMBIN)/bundle/$@
+	git clone https://github.com/ervandew/$@.git
 	mv -f $@ $(VIMBIN)/bundle/$@
 
 # Adds fancy bottom bar
@@ -49,7 +55,7 @@ vim-gitgutter :
 clean :
 	rm -rf $(OUTPUT) $(DEPEND) $(OPTION)
 
-spotless : clean
+spotless : clean 
 
 uninstall : spotless
 	rm -rf ~/$(OUTPUT) $(VIMBIN)
