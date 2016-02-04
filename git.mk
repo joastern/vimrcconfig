@@ -1,7 +1,7 @@
 # Makefile for Git
 
 pull :
-	git $@ origin master
+	git $@
 
 commit : pull spotless
 	git add --all
