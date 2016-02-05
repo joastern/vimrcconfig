@@ -6,7 +6,8 @@ OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
 VIMBUN=$(VIMBIN)/bundle
 
-default : pull install
+default : pull
+	make install
 
 install : $(DEPEND) $(OUTPUT)
 	mv -f $(OUTPUT) ~
