@@ -73,6 +73,9 @@ colorscheme solarized
 " Add max char indicator
 match ErrorMsg '\%>120v.\+'
 
+" Set F7 to auto format (similar to G=gg)
+map <F7> mzG=gg`z
+
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
 " autocmd StdinReadPre * let s:std_in=1 "cont
@@ -102,5 +105,5 @@ function! HasPaste()
   if &paste
     return 'PASTE MODE '
   en
-    return ''
+  return ''
 endfunction
