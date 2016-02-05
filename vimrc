@@ -74,7 +74,7 @@ colorscheme solarized
 match ErrorMsg '\%>120v.\+'
 
 " Auto format (similar to G=gg)
-nnoremap <F7> mzG=gg`z " Run with F7
+map <F7> mzG=gg`z " Run with F7
 
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
