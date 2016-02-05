@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen auto-pairs supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
+DEPEND=pathogen auto-pairs undotree supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -37,6 +37,11 @@ nerdtree-git-plugin :
 supertab :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/ervandew/$@.git $(VIMBUN)/$@
+
+# Adds undo sidebar
+undotree :
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/mbbill/$@.git $(VIMBUN)/$@
 
 # Adds fancy bottom bar
 vim-airline :

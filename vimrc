@@ -73,8 +73,8 @@ colorscheme solarized
 " Add max char indicator
 match ErrorMsg '\%>120v.\+'
 
-" Set F7 to auto format (similar to G=gg)
-map <F7> mzG=gg`z
+" Auto format (similar to G=gg)
+nnoremap <F7> mzG=gg`z " Run with F7
 
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
@@ -90,6 +90,13 @@ let g:airplane_powerline_fonts = 1
 " Configure gitgutter
 let g:gitgutter_realtime = 1
 " let g:gitgutter_highlight_lines = 1 "Enable gitgitter highlight
+
+" Configure undotree
+nnoremap <F5> :UndotreeToggle<cr> "Run with F5
+if has("persistent_undo")
+  set undodir=~/.undodir/
+  set undofile
+endif
 
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog
