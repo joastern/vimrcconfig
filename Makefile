@@ -1,7 +1,8 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
 
-default : pull install
+default : pull 
+	make install
 
 install : $(OUTPUT)
 	mv -f $(OUTPUT) ~
