@@ -71,10 +71,12 @@ let g:solarized_contrast="high"
 colorscheme solarized
 
 " Add max char indicator
+set textwidth=120
 match ErrorMsg '\%>120v.\+'
+map <F6> gq " Auto maximize line width with F6
 
 " Auto format (similar to G=gg)
-map <F7> mzG=gg`z " Run with F7
+map <F7> mzG=gg`z " Auto format with F7
 
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
