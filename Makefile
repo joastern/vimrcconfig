@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen auto-pairs undotree supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
+DEPEND=pathogen auto-pairs html5.vim undotree supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -23,6 +23,11 @@ pathogen :
 auto-pairs :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/jiangmiao/$@.git $(VIMBUN)/$@
+
+# HTML5 smart indentation
+html5.vim :
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/othree/$@.git $(VIMBUN)/$@
 
 # Adds directory browsing toolbar (change .vimrc as well)
 nerdtree :
