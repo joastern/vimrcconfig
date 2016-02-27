@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen auto-pairs html5.vim undotree supertab vim-airline vim-colors-solarized vim-gitgutter #$(OPTION)
+DEPEND=pathogen auto-pairs html5.vim undotree supertab vim-airline vim-colors-solarized vim-gitgutter vim-json #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -62,6 +62,11 @@ vim-colors-solarized :
 vim-gitgutter :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/airblade/$@.git $(VIMBUN)/$@
+
+# JSON smart indentation
+vim-json :
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/elzr/$@.git $(VIMBUN)/$@
 
 clean :
 	rm -rf $(OUTPUT)

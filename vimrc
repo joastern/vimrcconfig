@@ -72,8 +72,9 @@ colorscheme solarized
 
 " Add max char indicator
 set textwidth=120
-match ErrorMsg '\%>120v.\+'
+" match ErrorMsg '\%>120v.\+'
 map <F6> gq " Auto maximize line width with F6
+autocmd bufreadpre *.json setlocal textwidth=0
 
 " Auto format (similar to G=gg)
 map <F7> mzG=gg`z " Auto format with F7
