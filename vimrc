@@ -71,7 +71,7 @@ let g:solarized_contrast="high"
 colorscheme solarized
 
 " Add max char indicator
-set textwidth=120
+set textwidth=80
 " match ErrorMsg '\%>120v.\+'
 map <F6> gq " Auto maximize line width with F6
 autocmd bufreadpre *.json setlocal textwidth=0
