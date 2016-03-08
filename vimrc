@@ -76,8 +76,8 @@ set textwidth=80
 map <F6> gq " Auto maximize line width with F6
 autocmd bufreadpre *.json setlocal textwidth=0
 
-" Auto format (similar to G=gg)
-map <F7> mzG=gg`z " Auto format with F7
+" Auto format (similar to G=gg) (replaced by vim-autoformat)
+" map <F7> mzG=gg`z " Auto format with F7
 
 " Set nerdtree config (uncomment all of the below to use)
 " autocmd vimenter * NERDTree "start automatically
@@ -86,9 +86,12 @@ map <F7> mzG=gg`z " Auto format with F7
 " map <C-n> :NERDTreeToggle<CR>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
 
-" Set powerline fonts for airplane
+" vim-airplane
 " Doesn't work on Cygwin
-let g:airplane_powerline_fonts = 1
+let g:airplane_powerline_fonts = 1 " Set powerline fonts
+
+" vim-autoformat
+noremap <F3> :Autoformat<CR>
 
 " Configure gitgutter
 let g:gitgutter_realtime = 1

@@ -1,6 +1,6 @@
 SOURCE=vimrc
 OUTPUT=.vimrc
-DEPEND=pathogen auto-pairs html5.vim undotree supertab vim-airline vim-colors-solarized vim-gitgutter vim-json #$(OPTION)
+DEPEND=pathogen auto-pairs html5.vim undotree supertab vim-airline vim-autoformat vim-colors-solarized vim-gitgutter vim-json #$(OPTION)
 # Uncomment above to enable optional plugins
 OPTION=nerdtree nerdtree-git-plugin
 VIMBIN=~/.vim
@@ -52,6 +52,11 @@ undotree :
 vim-airline :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/bling/$@.git $(VIMBUN)/$@
+
+# Adds official autoformat
+vim-autoformat :
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/Chiel92/$@.git $(VIMBUN)/$@
 
 # Adds cool colortheme
 vim-colors-solarized :
