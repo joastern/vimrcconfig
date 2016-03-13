@@ -74,7 +74,9 @@ colorscheme solarized
 set textwidth=80
 " match ErrorMsg '\%>120v.\+'
 map <F6> gq " Auto maximize line width with F6
-autocmd bufreadpre *.json setlocal textwidth=0
+au FileType json setlocal textwidth=0
+au FileType tex setlocal spell
+au FileType gitcommit setlocal textwidth=0 spell
 
 " Auto format (similar to G=gg) (replaced by vim-autoformat)
 " map <F7> mzG=gg`z " Auto format with F7
