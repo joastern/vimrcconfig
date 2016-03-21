@@ -2,9 +2,11 @@ SOURCE=vimrc
 OUTPUT=.vimrc
 
 default : pull
-	make install
+	make upgrade
 
-install : $(OUTPUT) pluginstall
+upgrade : install pluginstall
+
+install : $(OUTPUT)
 	mv -f $(OUTPUT) ~
 
 $(OUTPUT) : $(SOURCE)

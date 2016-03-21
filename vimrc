@@ -1,7 +1,5 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vimrc file with settings
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimrc
+" vim configuration file
 
 " Install pathogen.vim
 execute pathogen#infect()
@@ -61,6 +59,16 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ Line:\ %l,%c
 set number
+
+" Common shortcuts
+vmap <C-c> y<Esc>i
+vmap <C-x> d<Esc>i
+imap <C-v> <Esc>pi
+imap <C-y> <Esc>ddi
+map <C-z> <Esc>
+imap <C-z> <Esc>ui
+map <C-w> :x<cr>
+nmap <C-a> ggVG
 
 " Establishes a color scheme
 set background=dark
