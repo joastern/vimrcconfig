@@ -61,6 +61,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ Line:\ %l,%c
 set number
 
 " Common shortcuts
+set clipboard=unnamed
 vmap <C-c> y<Esc>i
 vmap <C-x> d<Esc>i
 imap <C-v> <Esc>pi
