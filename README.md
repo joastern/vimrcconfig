@@ -28,8 +28,8 @@ Download and install the config files and plugins by running the following:
 ```
 #!bash
 
-git clone https://bitbucket.org/4U6U57/vimrc ~
-cd ~/vimrc
+git clone https://bitbucket.org/4U6U57/vimrc ~/bin/vimrc
+cd ~/bin/vimrc
 make
 ```
 
