@@ -4,7 +4,7 @@ OUTPUT=.vimrc
 default : pull
 	make upgrade
 
-upgrade : install pluginstall
+upgrade : install plugdefault
 
 install : $(OUTPUT)
 	mv -f $(OUTPUT) ~
@@ -16,6 +16,7 @@ clean :
 	rm -f $(OUTPUT)
 
 spotless : clean plugclear
+	rm -f ~/$(OUTPUT)
 
 .PHONY : default install clean spotless
 

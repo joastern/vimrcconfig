@@ -19,7 +19,7 @@ ENABLED+= vim-json # JSON support
 VIMBIN=~/.vim
 VIMBUN=$(VIMBIN)/bundle
 
-default : plugugrade
+plugdefault : pluginstall
 
 # Installs newly enabled plugins
 plugupgrade : $(ENABLED)
@@ -31,7 +31,7 @@ pluginstall : plugclear plugupgrade
 plugclear :
 	rm -rf $(VIMBUN)
 
-.PHONY : default plugugrade pluginstall plugclear
+.PHONY : plugdefault plugugrade pluginstall plugclear
 
 # Plugin download information below
 
@@ -95,4 +95,4 @@ PLUGINS+= vim-colors-solarized
 PLUGINS+= vim-gitgutter
 PLUGINS+= vim-json
 
-.PHONY : $(PLUGINS)
+.PHONY : $(PLUGINS) 

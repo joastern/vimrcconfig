@@ -62,14 +62,18 @@ set number
 
 " Common shortcuts
 set clipboard=unnamed
+nmap <C-a> ggVG
 vmap <C-c> y<Esc>i
-vmap <C-x> d<Esc>i
+map <C-v> <Esc>pi
 imap <C-v> <Esc>pi
+map <C-s> <Esc>:w<cr>
+imap <C-s> <Esc>:w<cr>
+map <C-w> <Esc>:x<cr>
+imap <C-w> <Esc>:x<cr>
+vmap <C-x> d<Esc>i
 imap <C-y> <Esc>ddi
 map <C-z> <Esc>
 imap <C-z> <Esc>ui
-map <C-w> :x<cr>
-nmap <C-a> ggVG
 
 " Establishes a color scheme
 set background=dark
@@ -85,6 +89,7 @@ set textwidth=80
 map <F6> gq " Auto maximize line width with F6
 au FileType json setlocal textwidth=0
 au FileType tex setlocal spell
+au FileType txt setlocal spell
 au FileType gitcommit setlocal textwidth=0 spell
 
 " Auto format (similar to G=gg) (replaced by vim-autoformat)
@@ -118,6 +123,7 @@ endif
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog
 au BufNewFile,BufRead *.vh  set filetype=verilog
+au BufNewFile,BufRead README set filetype=txt
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper Functions
