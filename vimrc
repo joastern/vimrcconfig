@@ -107,7 +107,8 @@ au FileType gitcommit setlocal textwidth=0 spell
 let g:airplane_powerline_fonts = 1 " Set powerline fonts
 
 " vim-autoformat
-noremap <F3> :Autoformat<CR>
+map <F3> <Esc>:Autoformat<CR>
+imap <F3> <Esc>:Autoformat<CR>
 
 " Configure gitgutter
 let g:gitgutter_realtime = 1
