@@ -1,6 +1,8 @@
 # vimrc #
 
-vimrc is the name for the configuration file of the very cool terminal text editor, `vim`. It modifies the behavior of the `vim` program itself through the use of included settings, and plugins on GitHub.
+`vimrc` is the name for the configuration file of the very cool terminal text
+editor, `vim`. It modifies the behavior of the `vim` program itself through the
+use of included settings, and plugins on GitHub.
 
 ## Features ##
 
@@ -10,6 +12,7 @@ vimrc is the name for the configuration file of the very cool terminal text edit
 * Drag to select text (Mac unstable, might need to use `Cmd+Click`)
 * `Ctrl+C` (copy), `Ctrl+S` (save), `Ctrl+V` (paste), `Ctrl+W` (save and quit), `Ctrl+X` (cut), `Ctrl+Y` (redo), `Ctrl+Z` (undo) work as expected
 * `F3` to autoformat
+* `F4` to view directory contents
 * `F5` to show tree of edits
 * Enforced textwidth of 80 characters for code
 * Spellcheck for text files
@@ -33,9 +36,12 @@ cd ~/bin/vimrc
 make
 ```
 
-As soon as it installs, you should be able to run vim as usual, and it should look a *lot* differently (hopefully in a good way).
+As soon as it installs, you should be able to run vim as usual, and it should
+look a *lot* differently (hopefully in a good way).
 
-After installation, the `~/vim` directory is no longer necessary. Feel free to delete it, or you leave it where it is and run `make` within it whenever you want to update the script.
+After installation, the `~/vim` directory is no longer necessary. Feel free to
+delete it, or you leave it where it is and run `make` within it whenever you
+want to update the script.
 
 ### Additional Options ###
 
@@ -47,7 +53,11 @@ Note the following options when running `make` on this program.
 
 ### Removal ###
 
-At any time, you can revert to the default version of vim by running `make spotless` in the `vimrc` directory (you may have to follow the installation instructions to get it, if you have deleted it from your computer). Note that this will also clear all plugins, including those that you might have installed yourself.
+At any time, you can revert to the default version of vim by running `make
+spotless` in the `vimrc` directory (you may have to follow the installation
+instructions to get it, if you have deleted it from your computer). Note that
+this will also clear all plugins, including those that you might have installed
+yourself.
 
 ### Plugins ###
 
@@ -56,6 +66,7 @@ Here is a list of the currently enabled plugins:
 * [tpope/phatogen](https://github.com/tpope/vim-pathogen): Installs other plugins **REQUIRED**
 * [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs): Auto add matching brackets
 * [othree/html5.vim](https://github.com/othree/html5.vim): HTML5 support
+* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) : Directory sidebar
 * [ervandew/supertab](https://github.com/ervandew/supertab): Autocomplete with tab key
 * [mbbill/undotree](https://github.com/mbbill/undotree): Undo sidebar
 * [bling/vim-airline](https://github.com/bling/vim-airline): Fancy bottom bar

@@ -5,19 +5,19 @@ ENABLED=pathogen # important, needed for all plugins
 
 # OPTIONAL PLUGINS BELOW
 # Uncomment those you want enabled
-ENABLED+= auto-pairs # Auto add matching brackets
-ENABLED+= html5.vim # HTML5 support
-# ENABLED=$(ENABLED) nerdtree nerdtree-git-plugin # Directory browsing toolbar
-ENABLED+= supertab # Autocomplete with tab key
-ENABLED+= undotree # Undo sidebar
-ENABLED+= vim-airline # Fancy bottom bar
-ENABLED+= vim-autoformat # Official autoformat
-ENABLED+= vim-colors-solarized # Cool colortheme
-ENABLED+= vim-gitgutter # Git +/-
-ENABLED+= vim-json # JSON support
+ENABLED += auto-pairs # Auto add matching brackets
+ENABLED += html5.vim # HTML5 support
+ENABLED += nerdtree nerdtree-git-plugin # Directory browsing toolbar
+ENABLED += supertab # Autocomplete with tab key
+ENABLED += undotree # Undo sidebar
+ENABLED += vim-airline # Fancy bottom bar
+ENABLED += vim-autoformat # Official autoformat
+ENABLED += vim-colors-solarized # Cool colortheme
+ENABLED += vim-gitgutter # Git +/-
+ENABLED += vim-json # JSON support
 
-VIMBIN=~/.vim
-VIMBUN=$(VIMBIN)/bundle
+VIMBIN = ~/.vim
+VIMBUN = $(VIMBIN)/bundle
 
 plugdefault : pluginstall
 

@@ -86,7 +86,8 @@ colorscheme solarized
 " Add max char indicator
 set textwidth=80
 " match ErrorMsg '\%>120v.\+'
-map <F6> gq " Auto maximize line width with F6
+map <F6> gqi
+imap <F6> <Esc>gqi
 au FileType json setlocal textwidth=0
 au FileType tex setlocal spell
 au FileType txt setlocal spell
@@ -96,26 +97,23 @@ au FileType gitcommit setlocal textwidth=0 spell
 " map <F7> mzG=gg`z " Auto format with F7
 
 " Set nerdtree config (uncomment all of the below to use)
-" autocmd vimenter * NERDTree "start automatically
-" autocmd StdinReadPre * let s:std_in=1 "cont
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif "cont
-" map <C-n> :NERDTreeToggle<CR>
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close automatically
+map <F4> <Esc>:NERDTreeToggle<CR>i
+imap <F4> <Esc>:NERDTreeToggle<CR>i
 
 " vim-airplane
 " Doesn't work on Cygwin
 let g:airplane_powerline_fonts = 1 " Set powerline fonts
 
 " vim-autoformat
-map <F3> <Esc>:Autoformat<CR>
-imap <F3> <Esc>:Autoformat<CR>
+map <F3> <Esc>:Autoformat<CR>i
+imap <F3> <Esc>:Autoformat<CR>i
 
 " Configure gitgutter
 let g:gitgutter_realtime = 1
 " let g:gitgutter_highlight_lines = 1 "Enable gitgitter highlight
 
 " Configure undotree
-nnoremap <F5> :UndotreeToggle<cr> "Run with F5
+nnoremap <F5> :UndotreeToggle<cr>
 if has("persistent_undo")
   set undodir=~/.undodir/
   set undofile
