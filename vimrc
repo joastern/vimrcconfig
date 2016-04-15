@@ -62,18 +62,24 @@ set number
 
 " Common shortcuts
 set clipboard=unnamed
-nmap <C-a> ggVG
+map <C-a> <Esc>ggVG
+imap <C-a> <Esc><C-a>
 vmap <C-c> y<Esc>i
+map <C-f> /
+imap <C-f> <Esc><C-f>
 map <C-s> <Esc>:w<cr>
-imap <C-s> <Esc>:w<cr>
+imap <C-s> <Esc><C-s>
+map <C-t> <Esc>:call NewTab()<CR>
+imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
-imap <C-v> <Esc>pi
+imap <C-v> <Esc><C-v>
 map <C-w> <Esc>:x<cr>
-imap <C-w> <Esc>:x<cr>
+imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
-imap <C-y> <Esc>ddi
-map <C-z> <Esc>
-imap <C-z> <Esc>ui
+map <C-y> <Esc>ddi
+imap <C-y> <Esc><C-y>
+map <C-z> <Esc>ui
+imap <C-z> <Esc><C-z>
 
 " Update shortcut
 map <C-F12> :!bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make<CR><CR>
