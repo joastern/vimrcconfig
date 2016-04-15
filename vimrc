@@ -76,7 +76,7 @@ map <C-z> <Esc>
 imap <C-z> <Esc>ui
 
 " Update shortcut
-map <C-F12> :!rm -rf ~/bin/vimrc && git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc && cd ~/bin/vimrc && make<CR><CR>
+map <C-F12> :!bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make<CR><CR>
 
 " Establishes a color scheme
 set background=dark

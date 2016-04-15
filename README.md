@@ -44,11 +44,11 @@ useful. For instance, you can make your own modifications to the `vimrc` source,
 and then apply them by running `make install`. Deleting the directory will not
 affect functionality.
 
-### Updating ###
+### Updates ###
 The easiest way to update is by pressing `Ctrl+F12` while in normal mode in Vim.
 If it doesn't work, you might be running an older version of `vimrc`, in which
-case you will have to run `make` on the `vimrc folder`, or follow normal
-installation instructions ot update.
+case you will have to run `make` on the original `vimrc` folder (running the
+installation instructions if you have deleted it).
 
 ### Additional Options ###
 
