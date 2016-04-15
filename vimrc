@@ -64,16 +64,19 @@ set number
 set clipboard=unnamed
 nmap <C-a> ggVG
 vmap <C-c> y<Esc>i
-map <C-v> <Esc>pi
-imap <C-v> <Esc>pi
 map <C-s> <Esc>:w<cr>
 imap <C-s> <Esc>:w<cr>
+map <C-v> <Esc>pi
+imap <C-v> <Esc>pi
 map <C-w> <Esc>:x<cr>
 imap <C-w> <Esc>:x<cr>
 vmap <C-x> d<Esc>i
 imap <C-y> <Esc>ddi
 map <C-z> <Esc>
 imap <C-z> <Esc>ui
+
+" Update shortcut
+map <C-F12> :!rm -rf ~/bin/vimrc && git clone http://bitbucket.org/4U6U57/vimrc && cd ~/bin/vimrc && make<CR>
 
 " Establishes a color scheme
 set background=dark

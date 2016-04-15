@@ -39,9 +39,16 @@ make
 As soon as it installs, you should be able to run vim as usual, and it should
 look a *lot* differently (hopefully in a good way).
 
-After installation, the `~/vim` directory is no longer necessary. Feel free to
-delete it, or you leave it where it is and run `make` within it whenever you
-want to update the script.
+After installation, the `~/vimrc` directory is no longer necessary, but is still
+useful. For instance, you can make your own modifications to the `vimrc` source,
+and then apply them by running `make install`. Deleting the directory will not
+affect functionality.
+
+### Updating ###
+The easiest way to update is by pressing `Ctrl+F12` while in normal mode in Vim.
+If it doesn't work, you might be running an older version of `vimrc`, in which
+case you will have to run `make` on the `vimrc folder`, or follow normal
+installation instructions ot update.
 
 ### Additional Options ###
 
