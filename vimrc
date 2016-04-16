@@ -69,7 +69,7 @@ map <C-f> /
 imap <C-f> <Esc><C-f>
 map <C-s> <Esc>:w<cr>
 imap <C-s> <Esc><C-s>
-map <C-t> <Esc>:call NewTab()<CR>
+map <C-t> <Esc>:tabedit<space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
