@@ -23,7 +23,6 @@ map <PageDown> <C-D>
 " Shows matching braces and such
 set showmatch
 
-" Turns off annoying error sounds
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -35,7 +34,6 @@ set ruler
 " Enables highlighting of search results
 set hlsearch
 
-" Turns on regular expressions
 set magic
 
 " Use spaces instead of tabs, spart tabbing
@@ -80,9 +78,9 @@ map <C-y> <Esc>ddi
 imap <C-y> <Esc><C-y>
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
-
 " Update shortcut
-map <C-F12> :!bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make<CR><CR>
+command Vimrc silent !bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make
+map <C-F12> :Vimrc<CR><C-L>
 
 " Establishes a color scheme
 set background=dark
@@ -109,7 +107,6 @@ au FileType gitcommit setlocal textwidth=0 spell
 map <F4> <Esc>:NERDTreeToggle<CR>i
 imap <F4> <Esc>:NERDTreeToggle<CR>i
 
-" vim-airplane
 " Doesn't work on Cygwin
 let g:airplane_powerline_fonts = 1 " Set powerline fonts
 
@@ -122,7 +119,8 @@ let g:gitgutter_realtime = 1
 " let g:gitgutter_highlight_lines = 1 "Enable gitgitter highlight
 
 " Configure undotree
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <F5> :UndotreeToggle<CR>
+
 if has("persistent_undo")
   set undodir=~/.undodir/
   set undofile

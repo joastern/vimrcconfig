@@ -3,7 +3,7 @@
 pull :
 	git $@
 
-commit : pull clean
+commit : pull
 	git add --all
 	git $@
 

@@ -18,7 +18,9 @@ clean :
 spotless : clean plugclear
 	rm -f ~/$(OUTPUT)
 
-.PHONY : default install clean spotless
+submit : push clean
+
+.PHONY : default install clean spotless submit
 
 include git.mk
 include plugins.mk
