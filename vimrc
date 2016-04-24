@@ -80,6 +80,10 @@ imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
+map <C-Left> <Esc>:tabnext<CR>
+imap <C-Left> <Esc><C-Left>
+map <C-Right> <Esc>:tabprev<CR>
+imap <C-Right> <Esc><C-Right>
 
 " Update shortcut
 command Vimrc tab sview ~/bin/vimrc/HELP.md
