@@ -13,6 +13,7 @@ ENABLED += undotree # Undo sidebar
 ENABLED += vim-airline # Fancy bottom bar
 ENABLED += vim-autoformat # Official autoformat
 ENABLED += vim-colors-solarized # Cool colortheme
+ENABLED += vim-cpp-enhanced-highlight # C++ syntax
 ENABLED += vim-gitgutter # Git +/-
 ENABLED += vim-json # JSON support
 
@@ -75,6 +76,10 @@ vim-colors-solarized :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/altercation/$@.git $(VIMBUN)/$@
 
+vim-cpp-enhanced-highlight :
+	rm -rf $(VIMBUN)/$@
+	git clone https://github.com/octol/$@.git $(VIMBUN)/$@
+
 vim-gitgutter :
 	rm -rf $(VIMBUN)/$@
 	git clone https://github.com/airblade/$@.git $(VIMBUN)/$@
@@ -95,4 +100,4 @@ PLUGINS+= vim-colors-solarized
 PLUGINS+= vim-gitgutter
 PLUGINS+= vim-json
 
-.PHONY : $(PLUGINS) 
+.PHONY : $(PLUGINS)

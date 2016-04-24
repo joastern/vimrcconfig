@@ -124,8 +124,8 @@ let g:gitgutter_realtime = 1
 nnoremap <F5> :UndotreeToggle<CR>
 
 if has("persistent_undo")
-    set undodir=~/.undodir/
-    set undofile
+	set undodir=~/.undodir/
+	set undofile
 endif
 
 au BufNewFile,BufRead *.cu  setf cu
@@ -140,8 +140,8 @@ au BufNewFile,BufRead README set filetype=txt
 
 " Returns true if paste mode is enabled
 function! HasPaste()
-    if &paste
-        return 'PASTE MODE '
-    en
-    return ''
+	if &paste
+		return 'PASTE MODE '
+	en
+	return ''
 endfunction
