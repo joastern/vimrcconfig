@@ -67,15 +67,15 @@ imap <C-a> <Esc><C-a>
 vmap <C-c> y<Esc>i
 map <C-f> /
 imap <C-f> <Esc><C-f>
-map <C-s> <Esc>:w<cr>
+map <C-s> <Esc>:w<CR>i
 imap <C-s> <Esc><C-s>
-map <C-t> <Esc>:tabedit<space>
+map <C-t> <Esc>:tabedit<Space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
 map <C-A-v> <Esc>:set paste<CR>i<C-v><Esc>:set nopaste<CR>i
 imap <C-A-v> <Esc><C-S-v>
-map <C-w> <Esc>:x<cr>
+map <C-w> <Esc>:x<CR>
 imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
 map <C-z> <Esc>ui
