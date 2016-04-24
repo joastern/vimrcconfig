@@ -23,6 +23,7 @@ map <PageDown> <C-D>
 " Shows matching braces and such
 set showmatch
 
+" Turns on annoying error sounds
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -34,6 +35,7 @@ set ruler
 " Enables highlighting of search results
 set hlsearch
 
+" Turns on regular expressions
 set magic
 
 " Use spaces instead of tabs, smart tabbing
@@ -76,10 +78,9 @@ imap <C-A-v> <Esc><C-S-v>
 map <C-w> <Esc>:x<cr>
 imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
-map <C-y> <Esc>ddi
-imap <C-y> <Esc><C-y>
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
+
 " Update shortcut
 command Vimrc silent !bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make
 map <C-F12> :Vimrc<CR><C-L>
@@ -127,7 +128,6 @@ if has("persistent_undo")
 	set undodir=~/.undodir/
 	set undofile
 endif
-
 au BufNewFile,BufRead *.cu  setf cu
 au BufNewFile,BufRead *.vs  set filetype=verilog
 au BufNewFile,BufRead *.vh  set filetype=verilog
