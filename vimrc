@@ -36,13 +36,13 @@ set hlsearch
 
 set magic
 
-" Use spaces instead of tabs, spart tabbing
-set expandtab
-set smarttab
+" Use spaces instead of tabs, smart tabbing
+" set expandtab
+" set smarttab
 
 " 1 tab = 2 spaces
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 set ai "Auto Indent
 "set si "Smart Indent
@@ -71,6 +71,8 @@ map <C-t> <Esc>:tabedit<space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
+map <C-A-v> <Esc>:set paste<CR>i<C-v><Esc>:set nopaste<CR>i
+imap <C-A-v> <Esc><C-S-v>
 map <C-w> <Esc>:x<cr>
 imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
@@ -122,8 +124,8 @@ let g:gitgutter_realtime = 1
 nnoremap <F5> :UndotreeToggle<CR>
 
 if has("persistent_undo")
-  set undodir=~/.undodir/
-  set undofile
+    set undodir=~/.undodir/
+    set undofile
 endif
 
 au BufNewFile,BufRead *.cu  setf cu
@@ -138,8 +140,8 @@ au BufNewFile,BufRead README set filetype=txt
 
 " Returns true if paste mode is enabled
 function! HasPaste()
-  if &paste
-    return 'PASTE MODE '
-  en
-  return ''
+    if &paste
+        return 'PASTE MODE '
+    en
+    return ''
 endfunction
