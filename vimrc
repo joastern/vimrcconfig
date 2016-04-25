@@ -1,4 +1,4 @@
-" vimrc swag swag swag swag
+" vimrc
 " vim configuration file 
 
 " Install pathogen.vim
@@ -99,7 +99,9 @@ set hidden
 " Update shortcut
 command Vimrc tab sview ~/bin/vimrc/HELP.md
 command VimrcUpdate !bash -c 'if [ -d ~/bin/vimrc ]; then echo; else git clone http://bitbucket.org/4U6U57/vimrc ~/bin/vimrc; fi' && cd ~/bin/vimrc && make
-map <C-F12> :silent VimrcUpdate<CR><C-L>
+map <F12> <Esc>:Vimrc<CR>
+imap <F12> <Esc><F12>
+map <C-F12> <Esc>:silent VimrcUpdate<CR><C-L>
 
 " Establishes a color scheme
 set background=dark
@@ -117,6 +119,7 @@ imap <F6> <Esc>gqi
 au FileType json setlocal textwidth=0
 au FileType tex setlocal spell
 au FileType txt setlocal spell
+au FileType md setlocal spell
 au FileType gitcommit setlocal textwidth=0 spell
 
 " Auto format (similar to G=gg) (replaced by vim-autoformat)
