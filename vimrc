@@ -1,5 +1,5 @@
-" vimrc
-" vim configuration file
+" vimrc swag swag swag swag
+" vim configuration file 
 
 " Install pathogen.vim
 execute pathogen#infect()
@@ -16,11 +16,11 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
-" Enables the PageUp and PageDown keys
+" Enables the PageUp and PageDown keys 
 map <PageUp> <C-U>
 map <PageDown> <C-D>
 
-" Shows matching braces and such
+" Shows matching braces and such 
 set showmatch
 
 " Turns on annoying error sounds
@@ -60,30 +60,41 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ Line:\ %l,%c
 set number
 
-" Common shortcuts
+" Common shortcuts 
 set clipboard=unnamed
 map <C-a> <Esc>ggVG
 imap <C-a> <Esc><C-a>
 vmap <C-c> y<Esc>i
+nmap <C-c> V<C-c>
+imap <C-c> <Esc><C-c>
 map <C-f> /
 imap <C-f> <Esc><C-f>
+map <C-q> <Esc>:q<CR>
+imap <C-q> <Esc><C-q>
 map <C-s> <Esc>:w<CR>i
 imap <C-s> <Esc><C-s>
-map <C-t> <Esc>:tabedit<Space>
+map <C-t> <Esc>:edit<Space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
-map <C-A-v> <Esc>:set paste<CR>i<C-v><Esc>:set nopaste<CR>i
-imap <C-A-v> <Esc><C-S-v>
-map <C-w> <Esc>:x<CR>
+map <C-w> <Esc>:w<CR>:bdelete<CR>
 imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
-map <C-Left> <Esc>:tabnext<CR>
+map <C-Left> <Esc>:bprev<CR>
 imap <C-Left> <Esc><C-Left>
-map <C-Right> <Esc>:tabprev<CR>
+map <C-Right> <Esc>:bnext<CR>
 imap <C-Right> <Esc><C-Right>
+
+" Tabs (really buffers) with vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Set Ctrl+C, Ctrl+Q to be visible by vim
+silent !stty -ixon > /dev/null 2>/dev/null
+
+set hidden
 
 " Update shortcut
 command Vimrc tab sview ~/bin/vimrc/HELP.md
