@@ -1,7 +1,6 @@
 # vimrc supported commands/keyboard shortcuts #
 
-Help file for `vimrc` package set. Use `Ctrl+W` or the `X` button in the top
-right corner to close.
+Help file for `vimrc` package set. Type `:q!` to close.
 
 ## Release Notes (2016-04-24) ##
 
