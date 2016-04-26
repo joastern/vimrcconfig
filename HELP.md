@@ -1,13 +1,7 @@
 # vimrc supported commands/keyboard shortcuts #
 
-Help file for `vimrc` package set. Type `:q!` to close.
-
-## Release Notes (2016-04-24) ##
-
-Tab functionality still not ideal, breaks `Ctrl+W` to save and quit (now have to
-		run `Ctrl+W` to save and close tab, then `Ctrl+Q` to actually quit `vim`).
-Trying to figure out a way to optionally close tab without saving, currently
-have to run command `:bd!`.
+Help file for `vimrc` package set. Type `Ctrl+W` (or press the X at the top
+right) to close.
 
 ## Commands ##
 
@@ -24,25 +18,21 @@ support is inconsistent with some versions of OSX, if it isn't working, try
 
 ### Standard Set ###
 
-* `Ctrl+A`:			select all
-* `Ctrl+C`:			copy selection
-* `Ctrl+F`:			find, enter phrase and then enter to search, use `n`/`p` to
-cycle through next/prev
-* `Ctrl+Q`:			quit program, will fail and warn if no save (run `:q!` to
-		force quit)
-* `Ctrl+S`:			save
-* `Ctrl+V`:			paste
-* `Ctrl+X`:			cut selection
-* `Ctrl+R`:			redo (not modified)
-* `Ctrl+Z`:			undo
+* `Ctrl+C`: 		copy selection to vim clipboard
+* `Ctrl+S`: 		save (inconsistent behavior)
+* `Ctrl+V`: 		paste from vim clipboard
+* `Ctrl+Shift+V`: 	paste from computer keyboard
+* `Ctrl+W`: 		save and quit
+* `Ctrl+X`: 		cut selection to vim keyboard
+* `Ctrl+R`: 		redo (not modified)
+* `Ctrl+Z`: 		undo
 
 ### Tab Functionality ###
 
-Run `vim FILE1 FILE2 [FILE3 ...]` to open multiple files in vim, all in tabs
-(really buffers, but they look like tabs).
+Run `vim FILE1 FILE2 [FILE3 ...]` to open multiple files in vim, all in tabs.
 
 * `Ctrl+T`:			open new tab, enter filename/path and then enter to open
-* `Ctrl+W`:			save and close tab
+* `Ctrl+W`:			save and close current tab
 * `Ctrl+->`:		move to next tab (note that `->` refers to rightarrow)
 * `Ctrl+<-`:		move to prev tab
 

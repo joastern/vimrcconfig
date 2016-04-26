@@ -73,23 +73,24 @@ map <C-q> <Esc>:q<CR>
 imap <C-q> <Esc><C-q>
 map <C-s> <Esc>:w<CR>i
 imap <C-s> <Esc><C-s>
-map <C-t> <Esc>:edit<Space>
+map <C-t> <Esc>:tabedit<Space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
-map <C-w> <Esc>:w<CR>:bdelete<CR>
+map <C-w> <Esc>:x<CR>
 imap <C-w> <Esc><C-w>
 vmap <C-x> d<Esc>i
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
-map <C-Left> <Esc>:bprev<CR>
+
+map <C-Left> <Esc>:tabprev<CR>
 imap <C-Left> <Esc><C-Left>
-map <C-Right> <Esc>:bnext<CR>
+map <C-Right> <Esc>:tabnext<CR>
 imap <C-Right> <Esc><C-Right>
 
 " Tabs (really buffers) with vim-airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Set Ctrl+C, Ctrl+Q to be visible by vim
 silent !stty -ixon > /dev/null 2>/dev/null
