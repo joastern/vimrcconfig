@@ -82,10 +82,12 @@ vmap <C-x> d<Esc>i
 map <C-z> <Esc>ui
 imap <C-z> <Esc><C-z>
 
+" Tab stuff
 map <C-Left> <Esc>:tabprev<CR>
 imap <C-Left> <Esc><C-Left>
 map <C-Right> <Esc>:tabnext<CR>
 imap <C-Right> <Esc><C-Right>
+au BufRead * nested tab sball
 
 " Tabs (really buffers) with vim-airline
 " let g:airline#extensions#tabline#enabled = 1

@@ -1,29 +1,44 @@
 # vimrc #
 
-`vimrc` is the name for the configuration file of the very cool terminal text
-editor, `vim`. It modifies the behavior of the `vim` program itself through the
-use of included settings, and plugins on GitHub.
+*vimrc* is the name for the configuration file of the very cool terminal text
+editor, *vim*. It modifies the behavior of the *vim* program itself through the
+use of included settings, keybindings, and plugins on GitHub.
 
 ## Features ##
+
+Below are a few of the more general features added to *vim* with this software:
 
 * Line numbering
 * Scroll support: Mousewheel, pgup/pgdn buttons
 * Click to move cursor (Mac unstable, might need to use `Cmd+Click`)
 * Drag to select text (Mac unstable, might need to use `Cmd+Click`)
-* Enforced textwidth of 80 characters for code
+* Enforced textwidth of 80 characters for code readability
 * Spellcheck for text files
 * Git diff display
-* A bunch of keyboard shortcuts, outlined in greater detail in [HELP.md](./HELP.md)
+
+It also adds a variety of intuitive keyboard shortcuts, documented in greater
+detail in the [HELP.md](./HELP.md) page.
 
 ## Requirements ##
 
-* Existing installation of `vim`
-* `bash` or other Unix shell equivalent (possible to install, but different commands)
-* `git` support, for downloading this repo (possible to install, but download manually)
+Besides the installation of *vim*, the below requirements are useful to have and
+make installation easier, but are not strict requirements.
 
-## Setup ##
+* Existing installation of *vim*
+* *bash* or other Unix shell equivalent
+* *make* utility
+* *git* support, for downloading this repo
 
-Download and install the config files and plugins by running the following:
+## Distribution ##
+
+*vimrc* is distributed (installed and updated) through git, specifically through
+this repo. All updates can be done through vim itself, by running
+`:VimrcUpdate`.
+
+### Installation ###
+
+You can install *vimrc* in the default location by running the following 3 lines
+in a terminal (location independent):
 
 ```
 #!bash
@@ -33,35 +48,31 @@ cd ~/bin/vimrc
 make
 ```
 
-As soon as it installs, you should be able to run vim as usual, and it should
-look a *lot* differently (hopefully in a good way).
+### Running vimrc ###
 
-After installation, the `~/vimrc` directory is no longer necessary, but is still
-useful. For instance, you can make your own modifications to the `vimrc` source,
-and then apply them by running `make install`. Deleting the directory will not
-affect functionality.
+*vimrc* is just a configuration of *vim*, so running it is identical to running
+`vim` normally.
+
+For more information on the functionalities of *vimrc*, either check out the
+`HELP.md` document, either [online](./HELP.md) or by running `:Vimrc` with
+*vimrc* installed.
 
 ### Updates ###
-The easiest way to update is by pressing `Ctrl+F12` while in normal mode in Vim.
-If it doesn't work, you might be running an older version of `vimrc`, in which
-case you will have to run `make` on the original `vimrc` folder (running the
-installation instructions if you have deleted it).
 
-### Additional Options ###
+Updates can be applied through *vim* itself, by running the command
+`:VimrcUpdate` or keyboard shortcut `Ctrl+F12` in normal mode.
 
-Note the following options when running `make` on this program.
-
-* `make`: default, installs vimrc and plugins. **This will delete all currently installed plugins!**
-* `make install pluginstall`: installs vimrc and plugins, leaving any existing plugins intact
-* `make install`: installs vimrc only **Might have unexpected behavior when attempting to use plugins**
+*vimrc* does not automatically update, to preserve changes you may have made to
+the configuration. Update frequently to add additional functionality.
 
 ### Removal ###
 
-At any time, you can revert to the default version of vim by running `make
-spotless` in the `vimrc` directory (you may have to follow the installation
-instructions to get it, if you have deleted it from your computer). Note that
-this will also clear all plugins, including those that you might have installed
-yourself.
+*vimrc* can be easily uninstalled by navigating to the install directory
+`~/bin/vimrc` and running `make spotless`. Note that this will not delete actual
+install directory, only decoupling it from the *vim* program.
+
+Reinstallation can be done by running `make` in the install directory, or by
+following normal installation procedure if you havae already deleted it.
 
 ### Plugins ###
 
@@ -79,6 +90,8 @@ Here is a list of the currently enabled plugins:
 * [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Git +/-
 * [elzr/vim-json](https://github.com/elzr/vim-json): JSON support
 
-## Credit ##
+## References ##
 
-Credit to the original version of the `.vimrc` file goes to UCSC **CMPE 110** Winter 2015.
+* Credit to the original version of the `.vimrc` file goes to UCSC **CMPE 110** Winter 2015
+* Special thanks to Isaak Cherdak and Sargis Yonan for feedback
+* Currently maintained by [August Valera](http://bitbucket.org/4U6U57).
