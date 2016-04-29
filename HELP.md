@@ -18,12 +18,16 @@ support is inconsistent with some versions of OSX, if it isn't working, try
 
 ### Standard Set ###
 
-* `Ctrl+C`: 		copy selection to vim clipboard
-* `Ctrl+S`: 		save (inconsistent behavior)
-* `Ctrl+V`: 		paste from vim clipboard
-* `Ctrl+Shift+V`: 	paste from computer keyboard
+* `Ctrl+A`: 		select all
+* `Ctrl+C`: 		copy selection (or current line) to clipboard
+* `Ctrl+F`: 		find, enter phrase then enter to search, cycle through with
+  `n` and `N` (next/prev)
+* `Ctrl+Q`: 		quit program, will fail and warn if not saved (run `:q!` to
+  force quit) (inconsistent behavior)
+* `Ctrl+S`: 		save
+* `Ctrl+V`: 		paste from clipboard
 * `Ctrl+W`: 		save and quit
-* `Ctrl+X`: 		cut selection to vim keyboard
+* `Ctrl+X`: 		cut selection to clipboard
 * `Ctrl+R`: 		redo (not modified)
 * `Ctrl+Z`: 		undo
 

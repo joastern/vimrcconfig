@@ -11,7 +11,6 @@ syntax on
 set bs=2
 
 " Enables the mouse so I can use the mouse scroll wheel to scroll through
-"set mouse=a
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
@@ -39,8 +38,8 @@ set hlsearch
 set magic
 
 " Use spaces instead of tabs, smart tabbing
-" set expandtab
-" set smarttab
+set expandtab
+set smarttab
 
 " 1 tab = 2 spaces
 set shiftwidth=4
@@ -115,8 +114,9 @@ colorscheme solarized
 " Add max char indicator
 set textwidth=80
 " match ErrorMsg '\%>120v.\+'
-map <F6> gqi
-imap <F6> <Esc>gqi
+vmap <F6> gqi
+nmap <F6> V<F6>
+imap <F6> <Esc><F6>
 au FileType json setlocal textwidth=0
 au FileType tex setlocal spell
 au FileType txt setlocal spell
@@ -128,14 +128,14 @@ au FileType gitcommit setlocal textwidth=0 spell
 
 " Set nerdtree config (uncomment all of the below to use)
 map <F4> <Esc>:NERDTreeToggle<CR>i
-imap <F4> <Esc>:NERDTreeToggle<CR>i
+imap <F4> <Esc><F4>
 
 " Doesn't work on Cygwin
 let g:airplane_powerline_fonts = 1 " Set powerline fonts
 
 " vim-autoformat
 map <F3> <Esc>:Autoformat<CR>i
-imap <F3> <Esc>:Autoformat<CR>i
+imap <F3> <Esc><F3>
 
 " Configure gitgutter
 let g:gitgutter_realtime = 1
