@@ -66,13 +66,14 @@ imap <C-a> <Esc><C-a>
 vmap <C-c> y<Esc>i
 nmap <C-c> V<C-c>
 imap <C-c> <Esc><C-c>
-map <C-f> /
+vmap <C-f> <C-c><Esc><C-f><C-r>"<CR>
+nmap <C-f> /VIMRC_DEFAULT_SEARCH<CR><Esc>/
 imap <C-f> <Esc><C-f>
 map <C-q> <Esc>:q<CR>
 imap <C-q> <Esc><C-q>
 map <C-s> <Esc>:w<CR>i
 imap <C-s> <Esc><C-s>
-map <C-t> <Esc>:tabedit<Space>
+map <C-t> <Esc>:tabedit<space>
 imap <C-t> <Esc><C-t>
 map <C-v> <Esc>pi
 imap <C-v> <Esc><C-v>
