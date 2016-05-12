@@ -67,7 +67,7 @@ vmap <C-c> y<Esc>i
 nmap <C-c> V<C-c>
 imap <C-c> <Esc><C-c>
 vmap <C-f> <C-c><Esc><C-f><C-r>"<CR>
-nmap <C-f> /VIMRC_DEFAULT_SEARCH<CR><Esc>/
+nmap <C-f> /
 imap <C-f> <Esc><C-f>
 map <C-q> <Esc>:q<CR>
 imap <C-q> <Esc><C-q>
