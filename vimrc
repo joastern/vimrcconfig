@@ -24,7 +24,7 @@ set showmatch
 
 " Turns on annoying error sounds
 set noerrorbells
-set novisualbell
+set visualbell
 set t_vb=
 set tm=500
 
