@@ -16,6 +16,7 @@ clean :
 	rm -f $(OUTPUT)
 
 spotless : clean plugclear
+	git reset --hard HEAD
 	rm -f ~/$(OUTPUT)
 
 submit : push clean
