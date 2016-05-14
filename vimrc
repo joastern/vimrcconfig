@@ -123,7 +123,8 @@ imap <F6> <Esc><F6>
 au FileType json setlocal textwidth=0
 au FileType tex setlocal spell
 au FileType txt setlocal spell
-au FileType md setlocal spell
+au BufNewFile,BufRead *.md set filetype=markdown
+au FileType markdown setlocal spell
 au FileType gitcommit setlocal textwidth=0 spell
 
 " Auto format (similar to G=gg) (replaced by vim-autoformat)
