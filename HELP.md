@@ -49,6 +49,8 @@ Run `vim FILE1 FILE2 [FILE3 ...]` to open multiple files in separate tabs in vim
 * `F12`:			opens this page, same as `:Vimrc`
 * `Ctrl+F12`:		updates the vimrc package set, same as `:VimrcUpdate`
 
-## More Info ##
+## References ##
 
-More info can be found at the [Bitbucket repo](http://bitbucket.org/4U6U57/vimrc).
+* More info can be found at the [Bitbucket repo](http://bitbucket.org/4U6U57/vimrc).
+* Currently maintained by [August Valera](http://bitbucket.org/4U6U57).
+* Please post an [issue](http://bitbucket.org/4U6U57/vimrc/issues/new) for feature suggestions.

@@ -54,8 +54,7 @@ make
 `vim` normally.
 
 For more information on the functionalities of *vimrc*, either check out the
-`HELP.md` document, either [online](./HELP.md) or by running `:Vimrc` with
-*vimrc* installed.
+[HELP.md](./HELP.md) file, online or by running `:Vimrc` in normal mode.
 
 ### Updates ###
 
@@ -63,16 +62,23 @@ Updates can be applied through *vim* itself, by running the command
 `:VimrcUpdate` or keyboard shortcut `Ctrl+F12` in normal mode.
 
 *vimrc* does not automatically update, to preserve changes you may have made to
-the configuration. Update frequently to add additional functionality.
+the configuration. Update frequently to add additional functionality and
+patches.
 
 ### Removal ###
 
 *vimrc* can be easily uninstalled by navigating to the install directory
 `~/bin/vimrc` and running `make spotless`. Note that this will not delete actual
-install directory, only decoupling it from the *vim* program.
+install directory, only decoupling it from the *vim* program. Delete the
+install directory afterwards with the command `rm -rf ~/bin/vimrc`.
 
-Reinstallation can be done by running `make` in the install directory, or by
-following normal installation procedure if you havae already deleted it.
+The installation directory can be deleted at any time; it is not necessary to
+run the program (although it is necessary to reference [HELP.md](./HELP/md)).
+Updating *vimrc* redownloads the install directory in the default location.
+
+Reinstallation can be done by running `make` in the install directory. If the
+installation directory is not present, then you will have to go through the
+normal installation process.
 
 ### Plugins ###
 
@@ -87,11 +93,13 @@ Here is a list of the currently enabled plugins:
 * [bling/vim-airline](https://github.com/bling/vim-airline): Fancy bottom bar
 * [Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat): Official autoformat
 * [altercation/vim-colors-solarized](https://github.com/altercation/vim-colors-solarized): Cool colortheme
+* [octol/vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight): C++ syntax
 * [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Git +/-
 * [elzr/vim-json](https://github.com/elzr/vim-json): JSON support
 
 ## References ##
 
-* Credit to the original version of the `.vimrc` file goes to UCSC **CMPE 110** Winter 2015
+* Credit to the original version of the `.vimrc` file goes to UCSC *CMPE 110* Winter 2015
 * Special thanks to Isaak Cherdak and Sargis Yonan for feedback
 * Currently maintained by [August Valera](http://bitbucket.org/4U6U57).
+* Please post an [issue](http://bitbucket.org/4U6U57/vimrc/issues/new) for feature suggestions.
