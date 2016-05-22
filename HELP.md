@@ -1,6 +1,6 @@
 # vimrc supported commands/keyboard shortcuts #
 
-Help file for *vimrc* package set. Type `Ctrl+W` (or press the X at the top
+Help file for *vimrc* package set. Type `Ctrl+Q` (or press the X at the top
 right) to close.
 
 ## Commands ##
@@ -37,6 +37,7 @@ Run `vim FILE1 FILE2 [FILE3 ...]` to open multiple files in separate tabs in vim
 
 * `Ctrl+T`:			open new tab (enter filename/path and then enter to open)
 * `Ctrl+W`:			save and close current tab
+* `Ctrl+Q`:       quit and close current tab (does not work for last tab open)
 * `Ctrl+->`:		move to next tab (note that `->` refers to rightarrow)
 * `Ctrl+<-`:		move to prev tab
 

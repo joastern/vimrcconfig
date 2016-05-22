@@ -69,7 +69,7 @@ imap <C-c> <Esc><C-c>
 vmap <C-f> <C-c><Esc><C-f><C-r>"<CR>
 nmap <C-f> /
 imap <C-f> <Esc><C-f>
-map <C-q> <Esc>:q<CR>
+map <C-q> <Esc>:bd<CR>
 imap <C-q> <Esc><C-q>
 map <C-s> <Esc>:w<CR>i
 imap <C-s> <Esc><C-s>
