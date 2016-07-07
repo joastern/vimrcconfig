@@ -121,6 +121,8 @@ vmap <F6> gqi
 nmap <F6> V<F6>
 imap <F6> <Esc><F6>
 au FileType json setlocal textwidth=0
+au FileType tsv setlocal spell textwidth=0
+au FileType csv setlocal spell textwidth=0
 au FileType tex setlocal spell
 au FileType txt setlocal spell
 au BufNewFile,BufRead *.md set filetype=markdown
